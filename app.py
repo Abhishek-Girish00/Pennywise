@@ -505,6 +505,9 @@ def export_csv():
     response.headers["Content-Disposition"] = "attachment; filename=pennywise_report.csv"
     return response
 
+@app.route("/")
+def home():
+    return app.send_static_file('index.html')
 
 # ---------------------------------------------------------------------------
 # Entry point
